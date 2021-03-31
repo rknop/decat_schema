@@ -1,0 +1,31 @@
+{
+    "namespace": "decat",
+    "type":      "record",
+    "name":      "object",
+    "doc":       "avro schema for decat transient object",
+    "version":   "0.12",
+    "fields": [
+        { "name": "objectid", "type": "string", "doc": "Unique ID for candidate" },
+        { "name": "ra", "type": "float", "doc": "RA of candidate (Degrees, J2000)" },
+        { "name": "dec", "type": "float", "doc": "Dec of candidate (Degrees, J2000)" },
+        { "name": "gallong", "type": "float", "doc": "Galactic longitude l of candidate (Degrees)" },
+        { "name": "gallat", "type": "float", "doc": "Galactic latitude b of candidate (Degrees)" },
+        { "name": "parallax", "type": ["null", "float"], "doc": "Parallax from GAIA catalog if it exists", "default": null },
+        { "name": "tdisc", "type": "string", "doc": "Time pipeline discovered the candidate (ISO 8601)" },
+        { "name": "ls_check", "type": "boolean", "doc": "Did we search for nearest Legacy Survey DR9 object?", "default": false },
+        { "name": "lsobjectid", "type": ["null", "string"], "doc": "ID of nearest object (within ...) from Legacy Survey DR9 if it exists", "default": null },
+        { "name": "lstype", "type": ["null", "string"], "doc": "Type of nearest object from Legacy Survey DR9", "default": null },
+        { "name": "lsdist", "type": ["null", "float"], "doc": "Distance from candidate to nearest DR9 object in arseconds", "default": null },
+        { "name": "lszphotmed", "type": ["null", "float"], "doc": "Meadian photo-z of nearest DR9 object", "default": null },
+        { "name": "lszphotmean", "type": ["null", "float"], "doc": "Average photo-z of nearest DR9 object", "default": null },
+        { "name": "lszphotl68", "type": ["null", "float"], "doc": "68% lower limit photo-z of nearest DR9 object", "default": null },
+        { "name": "lszphotu68", "type": ["null", "float"], "doc": "68% upper limit photo-z of nearest DR9 object", "default": null },
+        { "name": "lszphotl95", "type": ["null", "float"], "doc": "95% lower limit photo-z of nearest DR9 object", "default": null },
+        { "name": "lszphotu95", "type": ["null", "float"], "doc": "95% upper limit photo-z of nearest DR9 object", "default": null },
+        { "name": "sources", "type": { "type": "array", "items": "decat.source" }, "doc": "Observations of this candidate", "default": [] }
+    ]
+}
+
+        
+            
+    
