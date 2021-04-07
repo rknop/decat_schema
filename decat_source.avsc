@@ -3,7 +3,7 @@
     "type":      "record",
     "name":      "source",
     "doc":       "avro schema for source(i.e. pipeline subtraction processing) of decat transient object",
-    "version":   "0.12",
+    "version":   "0.13",
     "fields": [
         { "name": "sourceid", "type": "int", "doc": "Unique ID for observation" },
         { "name": "ra", "type": "float", "doc": "RA of observed transient (Degrees, J2000)" },
@@ -35,8 +35,8 @@
         { "name": "sciurl", "type": "string", "doc": "URL to preprocessed exposure at NERSC", "default": "" },
         { "name": "refurl", "type": "string", "doc": "URL to coadded/remapped reference exposure at NERSC", "default": "" },
         { "name": "diffurl", "type": "string", "doc": "URL to difference image at NERSC", "default": "" },
-        { "name": "scicutout", "type": ["null", "bytes"], "doc": "FITS image of cutout around candidate on search image", "default": null },
-        { "name": "refcutout", "type": ["null", "bytes"], "doc": "FITS image of cutout around candidate on coadded reference image", "default": null },
-        { "name": "diffcutout", "type": ["null", "bytes"], "doc": "FITS image of cutout around candidate on subtraction", "default": null }
+        { "name": "scicutout", "type": ["null", "bytes"], "doc": "gzipped FITS image of cutout around candidate on search image", "default": null },
+        { "name": "refcutout", "type": ["null", "bytes"], "doc": "gzipped FITS image of cutout around candidate on coadded reference image", "default": null },
+        { "name": "diffcutout", "type": ["null", "bytes"], "doc": "gzipped FITS image of cutout around candidate on subtraction", "default": null }
     ]
 }
