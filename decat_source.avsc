@@ -3,7 +3,7 @@
     "type":      "record",
     "name":      "source",
     "doc":       "avro schema for source(i.e. pipeline subtraction processing) of decat transient object",
-    "version":   "0.13",
+    "version":   "0.14",
     "fields": [
         { "name": "sourceid", "type": "int", "doc": "Unique ID for observation" },
         { "name": "ra", "type": "float", "doc": "RA of observed transient (Degrees, J2000)" },

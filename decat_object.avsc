@@ -3,7 +3,7 @@
     "type":      "record",
     "name":      "object",
     "doc":       "avro schema for decat transient object",
-    "version":   "0.13",
+    "version":   "0.14",
     "fields": [
         { "name": "objectid", "type": "string", "doc": "Unique ID for candidate" },
         { "name": "ra", "type": "float", "doc": "RA of candidate (Degrees, J2000)" },
@@ -22,7 +22,8 @@
         { "name": "lszphotu68", "type": ["null", "float"], "doc": "68% upper limit photo-z of nearest DR9 object", "default": null },
         { "name": "lszphotl95", "type": ["null", "float"], "doc": "95% lower limit photo-z of nearest DR9 object", "default": null },
         { "name": "lszphotu95", "type": ["null", "float"], "doc": "95% upper limit photo-z of nearest DR9 object", "default": null },
-        { "name": "sources", "type": { "type": "array", "items": "decat.source" }, "doc": "Observations of this candidate", "default": [] }
+        { "name": "triggersource", "type": ["null", "decat.source"], "doc": "Observation that triggered this alert." },
+        { "name": "sources", "type": { "type": "array", "items": "decat.source" }, "doc": "All saved observations of this candidate (w/o cutouts)", "default": [] }
     ]
 }
 
